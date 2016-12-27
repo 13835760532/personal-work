@@ -55,7 +55,7 @@ html,body{
 }
 
 .scene .room .panel:nth-child(6){
-    background:#D4BE99 url(../img/chuanghu2.jpg) center center no-repeat;
+    background:#D4BE99 url(../img/chuanghu.jpg) center center no-repeat;
     background-size: 80% 90%;
     box-shadow: 0 0 200px #999 inset;
 }
@@ -63,7 +63,8 @@ html,body{
 .left .iconfont{
     width:100px;height:100px;
     float:left;margin:230px 100px;
-    background:#999;
+    background:url(../img/xiang.jpg) 0px 0px no-repeat;
+    background-size: 100px 100px;
     box-shadow: 0 0 5px #aaa;
     border-radius: 5px;
     color:orangered;font-size:100px;text-align: center;
@@ -72,11 +73,18 @@ html,body{
     text-shadow:0 0 3px red ;overflow: hidden;
 
 }
-
+.left .iconfont a{
+    width: 100px; height:100px;
+    display: block;
+    font-size: 36px;
+    line-height: 100px;
+    color:black;
+}
 .right .iconfont{
     width:100px;height:100px;
     float:left;margin:230px 100px;
-    background:#999;
+    background:url(../img/xiang.jpg) 0px 0px no-repeat;
+    background-size: 100px 100px;
     box-shadow: 0 0 5px #aaa;
     border-radius: 5px;
     color:orangered;font-size:100px;text-align: center;
@@ -84,6 +92,12 @@ html,body{
     transform: rotate3d(0,1,0,180deg);
     text-shadow:0 0 3px red ;
     backface-visibility: visible;
-
+}
+.right .iconfont a{
+    width: 100px; height:100px;
+    display: block;
+    font-size: 36px;
+    line-height: 100px;
+    color:black;
 }
 

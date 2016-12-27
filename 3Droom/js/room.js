@@ -1,15 +1,27 @@
 window.onload=function(){
     var scene=document.querySelector(".scene");
     var room=document.querySelector(".room");
+    //屏幕的宽高
     var clientW=document.documentElement.clientWidth;
     var clientH=document.documentElement.clientHeight;
     room.style.transformOrigin="center center "+clientW/2+"px"
+
+    //最后一个面
+
     var lastPanel=document.querySelector(".panel:last-child");
     lastPanel.style.transform="translate3d(0,0,"+clientW+"px) rotate3d(0,1,0,180deg)";
+
+
+    //天花板 地板
+
     var floor=document.querySelector(".panel:first-child");
     var ceil=document.querySelector(".panel:nth-child(5)");
     floor.style.width=ceil.style.width=floor.style.height=ceil.style.height=clientW+"px";
     ceil.style.top=-(clientW-clientH)+"px";
+
+
+    //执行
+
     room.style.transform="rotate3d(0,1,0,-180deg)";
 
     lastPanel.onclick=function(){
