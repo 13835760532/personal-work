@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/xq.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script type="text/javascript">
+        function resize(now,type){
+            var type=type||"x";
+            var cw=document.documentElement.clientWidth;
+            var ch=document.documentElement.clientHeight;
+            var html=document.getElementsByTagName("html")[0];
+            if(type=="x"){
+                var scale=cw/now*100;
+                html.style.fontSize=scale+"px";
+            }else if(type=="y"){
+                scale=ch/now*100;
+                html.style.fontSize=scale+"px";
+            }
+        }
+        window.onload=function(){
+            resize(1334,"y");
+            var myScroll;
+                myScroll=new IScroll("#wrapper",{
+                    mouseWheel:true,
+                    bounce:true,
+                    click:true
+                })
+                myScroll.on("scrollStart",function(){
+                    if(this.directionY==1){
+                        $(".fix").css("height","0")
+                        $("#wrapper").css("bottom","0")
+                    }else if(this.directionY==-1){
+                        $("#wrapper").css("bottom","0.96rem")
+                        $(".fix").css("height","0.96rem")
+                    }
+                })
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="head-inner">
+        <a href="index.html" class="back"></a>
+        <div class="head_right">
+            <a href="" class="font"></a>
+            <div class="line"></div>
+            <a href="" class="pinglun">
+                <img src="img/详情_03.png" alt="" class="pl-img1">
+                <span>1.6K</span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="fix">
+    <a href=""><img src="img/font_01.png" alt="" style="width: 0.52rem;height: 0.56rem"><span>评论</span></a>
+    <a href=""><img src="img/font_02.png" alt="" style="width: 0.52rem;height: 0.56rem"><span>分享</span></a>
+    <a href=""><img src="img/font_03.png" alt="" style="width: 0.52rem;height: 0.56rem"><span>收藏</span></a>
+    <a href=""><img src="img/font_04.png" alt="" style="width: 0.59rem;height: 0.66rem"><span class="font4">88</span></a>
+</div>
+<div id="wrapper">
+    <div id="scroller">
+            <div class="body-inner">
+                <div class="title">罗尔回应“为何不卖房救女”：深圳的房子以后要留给儿子</div>
+                <div class="sj">深圳都市频道<br>2016-12-04 14:55:04</div>
+                <img src="img/列表_06.png" alt="" class="body-img">
+                <p class="body-p">罗尔回应不卖房救女儿。视频来源 深圳都市频道(00:51)</p>
+             <div class="content">
+                一篇名为《罗某笑，你给我站住》的文章11月30日刷爆微信朋友圈，引发热议。<br><br>
+                 罗某笑的爸爸罗尔接受深圳都市频道采访，解释自己有三套房还为女儿募捐的原因：1、深圳的房子是要留给儿子的。2、东莞其中一套是现在的老婆名下的，另一套是以后养老要用的。3、写下救女儿的文章，是将来留给女儿看的。<br><br>
+                 【对话实录】<br><br>
+                 董超：最大的网上几个声音的质疑，一个就是您有三套房产还有车，那为什么还要捐款，这是不是有诈和骗的嫌疑。<br><br>
+                 罗尔：这个房子的话，深圳这个房子以后是要归儿子的，我是不能卖的。东莞买的房子包括酒店公寓，酒店公寓署名是我现在老婆名字，另外还有一个就是东莞的住宅楼。这个房子的话等儿子大学毕业以后，他参加工作以后我就想（把东莞市区的房子）给儿子。<br><br>
+                 董超：我看您后面的文章，也有些网友提出来，在生活状态上做了一些对比，他们解读出了要求捐的这种意向，所以有人也抓住这一点，说您渲染了一些程度，这您怎么看？<br><br>
+                 罗尔：我觉得只是表达心情，一天要花上万块的诊疗费用，我心慌，心慌的来源是什么就是三万块钱的医疗费，我觉得这个表达应该是，这个数字的话给读者一个明白，给焦虑的读者们一个解释。<br><br>
+                 董超：干脆全部退还这样一个决定，在数字上它又归于原点了，你觉得这样算是这个事件平息了吗？<br><br>
+                  罗尔：我希望能早点平息，能因此而平息，但问题是好像还很难说。<br><br>
+                 董超：通过您的文章，还有通过自媒体发表，还有通过打赏这种沟通，经过了这个风波，这种方式您还会去做吗？<br><br>
+                 罗尔：打赏关了，写文章我肯定再写，我写这个文章一直这么写，就是把女儿治病的经过，使我女儿长大能看到这些文字，其实也是对女儿的一种祝福。能看见的话，就意味着她就没事了，这个就过去了，还是有一种愿望，还是祝福。<br><br>
+                 责任编辑：薛冬霞
+             </div>
+                <div class="fenxiang">
+                    <a href=""><img src="img/weibo.png" alt=""></a>
+                    <a href=""><img src="img/微信_01.png" alt=""></a>
+                    <a href=""><img src="img/微信_02.png" alt=""></a>
+                </div>
+            </div>
+            <div class="repl">热评论</div>
+            <div class="pl-con">
+                <div class="pl-top">
+                    <div class="pl-t-left">
+                    <img src="img/评论_01.png" alt="" class="pl-img1">
+                    <p class="pl-top-p1">35353535:</p>
+                        <p>6小时前</p>
+                    </div>
+                    <div class="pl-t-right">
+                    <img src="img/评论_02.png" alt="" class="pl-img2">
+                    <span>921</span>
+                    </div>
+                </div>
+                <div class="pl-bottom">一套房子留给儿子，一套房子出租养老，却要向网友募捐，生命当前，女儿的命比不上你的房子吗？</div>
+            </div>
+            <div class="pl-con">
+                <div class="pl-top">
+                    <div class="pl-t-left">
+                        <img src="img/评论_01.png" alt="" class="pl-img1">
+                        <p class="pl-top-p1">35353535:</p>
+                        <p>6小时前</p>
+                    </div>
+                    <div class="pl-t-right">
+                        <img src="img/评论_02.png" alt="" class="pl-img2">
+                        <span>921</span>
+                    </div>
+                </div>
+                <div class="pl-bottom">一套房子留给儿子，一套房子出租养老，却要向网友募捐，生命当前，女儿的命比不上你的房子吗？</div>
+            </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+   /* var swiper = new Swiper('.swiper-container',{
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });*/
+</script>

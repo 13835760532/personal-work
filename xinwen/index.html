@@ -8,16 +8,16 @@
     <meta name="x5-fullscreen" content="true" />
     <meta name="full-screen" content="yes">
     <title></title>
-    <script src="http://localhost:8888/js/fastclick.js"></script>
-    <script src="http://localhost:8888/js/swiper.jquery.min.js"></script>
-    <script src="http://localhost:8888/js/swiper.min.js"></script>
-    <script src="http://localhost:8888/js/swiper.animate1.0.2.min.js"></script>
-    <script src="http://localhost:8888/js/zepto.min.js"></script>
-    <script src="http://localhost:8888/js/iscroll.js"></script>
-    <link rel="stylesheet" href="http://localhost:8888/css/swiper.css">
-    <link rel="stylesheet" href="http://localhost:8888/css/swiper.min.css">
-    <link rel="stylesheet" href="http://localhost:8888/css/index.css">
-    <link rel="stylesheet" href="http://localhost:8888/css/animate.min.css">
+    <script src="js/fastclick.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <script type="text/javascript">
         function resize(now,type){
             var type=type||"x";
@@ -33,7 +33,7 @@
             }
         }
         window.onload=function(){
-            /*FastClick.attach(document.body);*/
+            FastClick.attach(document.body);
             resize(1334,"y");
             var myScroll;
             myScroll=new IScroll("#wrapper",{
@@ -63,9 +63,8 @@
 <div class="header">
     <a href="javascript:;"></a>
     <a href=""></a>
-    <a href="/login"></a>
+    <a href="login.html"></a>
 </div>
-
 <div class="xiala">
     <div class="category">
         <p class="cp-1">澎湃</p>
@@ -92,40 +91,61 @@
         <p class="cp-2">Life</p>
     </div>
 </div>
-
 <div id="wrapper">
     <div id="scroller">
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <!--<div class="zy">
+            <div class="zy">
                 <a href="xq.html">
-                    <img src="http://localhost:8888/img/主席.png" alt="" class="zx">
+                    <img src="img/主席.png" alt="" class="zx">
                     <p class="p1">“发展权利宣言通过30周年”国际研讨会开幕，习近平致贺信</p>
                     <div class="sj">
                         <span>中南海</span>
-                        <img src="http://localhost:8888/img/时间.png" alt="">
+                        <img src="img/时间.png" alt="">
                         <span>一小时前</span>
                         <div class="fenlei">专题</div>
                     </div>
                 </a>
-            </div>-->
-            <%for(var i=0;i<lists.length;i++){%>
+            </div>
             <div class="grid">
-            <a href="/show/<%=lists[i].id%>" class="grid-a">
-                <img src="http://localhost:8888/img/<%=lists[i].aimg.split(";")[0]%>" alt="" class="gird-1">
-                <p class="p1"><%=lists[i].atitle%></p>
+            <a href="xq.html">
+                <img src="img/gird-1.png" alt="" class="gird-1">
+                <p class="p1">逝世一年多后，全国人大常委原委员长万里与夫人合葬八宝山</p>
                 <div class="sj">
                     <span>中南海</span>
-                    <img src="http://localhost:8888/img/时间.png" alt="">
+                    <img src="img/时间.png" alt="">
                     <span>一小时前</span>
                     <div class="fenlei">推荐</div>
                 </div>
             </a>
         </div>
-            <%}%>
+            <div class="grid">
+                <a href="xq.html">
+                    <img src="img/gird-2.png" alt="" class="gird-1">
+                    <p class="p1">国际研究称青蒿素或可治糖尿病，屠呦呦团队称暂无跟进计划</p>
+                    <div class="sj">
+                        <span>中南海</span>
+                        <img src="img/时间.png" alt="">
+                        <span>一小时前</span>
+                        <div class="fenlei">推荐</div>
+                    </div>
+                </a>
+            </div>
+            <div class="grid">
+                <a href="xq.html">
+                    <img src="img/gird-3.png" alt="" class="gird-1">
+                    <p class="p1">罗尔回应“为何不卖房救女”：深圳的房子以后要留给儿子</p>
+                    <div class="sj">
+                        <span>中南海</span>
+                        <img src="img/时间.png" alt="">
+                        <span>一小时前</span>
+                        <div class="fenlei">推荐</div>
+                    </div>
+                </a>
+            </div>
         </div>
-        <!--<div class="swiper-slide">
+        <div class="swiper-slide">
             <div class="zy">
                 <a href="xq.html">
                     <img src="img/列表_06.png" alt="" class="zx">
@@ -174,7 +194,7 @@
                     </div>
                 </a>
             </div>
-        </div>-->
+        </div>
     </div>
    <div class="swiper-pagination"></div>
 </div>

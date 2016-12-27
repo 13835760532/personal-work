@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height:100%;
+    background: #fff;
+}
+a{
+    text-decoration: none;
+    color: black;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*字体图标*/
+.icon{
+    width: 0.7em;
+    height: 0.7em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.icon1{
+    width: 0.8em;
+    height: 0.8em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.icon3{
+    width: 0.7em;
+    height: 0.7em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    color: #979797;
+}
+.icon4{
+    width: 0.6em;
+    height: 0.6em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    color: #979797;
+}
+/*头部*/
+.header{
+    width:100%;
+    height:0.9rem;
+    border-bottom: 1px solid #AFAFAF;
+    text-align: center;
+}
+.head-inner{
+    width:6.76rem;
+    padding: 0.2rem 0;
+    overflow: hidden;
+    margin: auto;
+}
+.back{
+    width:0.47rem;
+    height: 0.46em;
+    display: block;
+    float: left;
+    background: url("../img/login_03.png");
+    background-size: 0.47rem 0.48em;
+}
+.header span{
+    font-size: 0.37rem;
+    float: left;
+    font-weight: bold;
+    margin-left: 2.52rem;
+}
+.jiekou{
+    margin-top: 0.61rem;
+    padding: 0 0.44rem;
+    overflow: hidden;
+}
+.wx{
+    float: left;
+}
+.wx p{
+    font-size: 0.33rem;
+    margin-left: 0.08rem;
+    font-weight: 500;
+}
+.wx .p1{
+    font-size: 0.33rem;
+    margin-left: 0.2rem;
+}
+.wx-inner{
+    width:1.5rem;
+    height:1.5rem;
+    background: #52B345;
+    margin-right: 0.15rem;
+    border-radius: 0.2rem;
+    position: relative;
+    margin-bottom: 0.2rem;
+}
+.qq .wx-inner{
+    background: #00A5EB;
+}
+.wb .wx-inner{
+    background: #E78139;
+}
+.db-inner{
+    margin-right: 0;
+}
+/*输入密码 账号*/
+.shuru{
+    padding: 0 0.44rem;
+    margin-top: 1.5rem;
+}
+.btn{
+    padding: 0 0.44rem;
+    margin-top: 0.8rem;
+}
+.btn input{
+    background: #00A5EB;
+    border: 0;
+    color: #fff;
+    font-size: 0.4rem;
+    font-weight: bold;
+}
+.btn input:nth-child(1){
+    width:6.6rem;
+    height:0.8rem;
+}
+.btn input:nth-child(2){
+     width:3.1rem;
+     height:0.8rem;
+    float: left;
+    margin-right: 0.4rem;
+    margin-top: 0.62rem;
+ }
+.btn input:nth-child(3){
+    width:3.1rem;
+    height:0.8rem;
+    display: block;
+    margin-top: 0.62rem;
+}
+.zh{
+    border-bottom: 0.01rem solid #C8C8C8;
+}
+.zh input{
+    border: 0;
+    height:0.8rem;
+    color: #C8C8C8;
+    font-size: 0.4rem;
+}
+.zh2 input{
+    margin-left: 0.1rem;
+}
