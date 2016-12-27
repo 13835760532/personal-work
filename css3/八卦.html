@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--子元素撑开父元素方法-->
+    <!--.div:before,.div:after{-->
+       <!--content:"";-->
+    <!--display:block;-->
+    <!--}-->
+    <!--.div:after{-->
+       <!--clear:both;-->
+    <!--}-->
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+        .box{
+            width:200px;
+            height:200px;
+            margin:0 auto;
+            border:1px solid black;
+            border-bottom: 100px solid black;
+            border-radius: 50%;
+            position:relative;
+            transition: all 2s ease;
+        }
+        .box:before{
+            content: "";
+            width: 20px;
+            height:20px; border-radius: 50%;
+            border: 40px solid black;
+            background:#fff;
+            position: absolute;
+            top:50%;
+            left:0;
+
+        }
+        .box:after{
+            content: "";
+            width: 20px;
+            height:20px; border-radius: 50%;
+            border: 40px solid #fff;
+            background:black;
+            position: absolute;
+            top:50%;
+            right:0;
+        }
+        .box:hover{
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
