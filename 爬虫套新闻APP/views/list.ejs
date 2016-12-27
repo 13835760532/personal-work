@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="full-screen" content="yes">
+    <title></title>
+    <script src="http://localhost:8888/js/fastclick.js"></script>
+    <script src="http://localhost:8888/js/swiper.jquery.min.js"></script>
+    <script src="http://localhost:8888/js/swiper.min.js"></script>
+    <script src="http://localhost:8888/js/swiper.animate1.0.2.min.js"></script>
+    <script src="http://localhost:8888/js/zepto.min.js"></script>
+    <script src="http://localhost:8888/js/iscroll.js"></script>
+    <link rel="stylesheet" href="http://localhost:8888/css/swiper.css">
+    <link rel="stylesheet" href="http://localhost:8888/css/swiper.min.css">
+    <link rel="stylesheet" href="http://localhost:8888/css/index.css">
+    <link rel="stylesheet" href="http://localhost:8888/css/animate.min.css">
+    <script type="text/javascript">
+        function resize(now,type){
+            var type=type||"x";
+            var cw=document.documentElement.clientWidth;
+            var ch=document.documentElement.clientHeight;
+            var html=document.getElementsByTagName("html")[0];
+            if(type=="x"){
+                var scale=cw/now*100;
+                html.style.fontSize=scale+"px";
+            }else if(type=="y"){
+                scale=ch/now*100;
+                html.style.fontSize=scale+"px";
+            }
+        }
+        window.onload=function(){
+            /*FastClick.attach(document.body);*/
+            resize(1334,"y");
+            var myScroll;
+            myScroll=new IScroll("#wrapper",{
+                mouseWheel:true,
+                bounce:true,
+                click:true
+            })
+            //点击下拉标题
+            var flag=true;
+            $(".header:nth-child(1)").click(function(){
+                if(flag==true){
+                    $(".xiala").css({
+                        height:"3.7rem"
+                    })
+                    flag=false;
+                }else{
+                    $(".xiala").css({
+                        height:"0"
+                    })
+                    flag=true;
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <a href="javascript:;"></a>
+    <a href=""></a>
+    <a href="/login"></a>
+</div>
+
+<div class="xiala">
+    <div class="category">
+        <p class="cp-1">澎湃</p>
+        <p class="cp-2">The Paper</p>
+    </div>
+    <div class="category">
+        <p class="cp-1">问吧</p>
+        <p class="cp-2">Interview</p>
+    </div>
+    <div class="category">
+        <p class="cp-1">时事</p>
+        <p class="cp-2">Politics</p>
+    </div>
+    <div class="category">
+        <p class="cp-1">财经</p>
+        <p class="cp-2">Business</p>
+    </div>
+    <div class="category">
+        <p class="cp-1">思想</p>
+        <p class="cp-2">Insight</p>
+    </div>
+    <div class="category">
+        <p class="cp-1">生活</p>
+        <p class="cp-2">Life</p>
+    </div>
+</div>
+
+<div id="wrapper">
+    <div id="scroller">
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <!--<div class="zy">
+                <a href="xq.html">
+                    <img src="http://localhost:8888/img/主席.png" alt="" class="zx">
+                    <p class="p1">“发展权利宣言通过30周年”国际研讨会开幕，习近平致贺信</p>
+                    <div class="sj">
+                        <span>中南海</span>
+                        <img src="http://localhost:8888/img/时间.png" alt="">
+                        <span>一小时前</span>
+                        <div class="fenlei">专题</div>
+                    </div>
+                </a>
+            </div>-->
+            <%for(var i=0;i<lists.length;i++){%>
+            <div class="grid">
+            <a href="/show/<%=lists[i].id%>" class="grid-a">
+                <img src="http://localhost:8888/img/<%=lists[i].aimg.split(";")[0]%>" alt="" class="gird-1">
+                <p class="p1"><%=lists[i].atitle%></p>
+                <div class="sj">
+                    <span>中南海</span>
+                    <img src="http://localhost:8888/img/时间.png" alt="">
+                    <span>一小时前</span>
+                    <div class="fenlei">推荐</div>
+                </div>
+            </a>
+        </div>
+            <%}%>
+        </div>
+        <!--<div class="swiper-slide">
+            <div class="zy">
+                <a href="xq.html">
+                    <img src="img/列表_06.png" alt="" class="zx">
+                    <p class="p1">罗尔回应“为何不卖房救女”：深圳的房子以后要留给儿子</p>
+                    <div class="sj">
+                        <span>中南海</span>
+                        <img src="img/时间.png" alt="">
+                        <span>一小时前</span>
+                        <div class="fenlei">专题</div>
+                    </div>
+                </a>
+            </div>
+            <div class="grid">
+                <a href="xq.html">
+                    <img src="img/列表_09.png" alt="" class="gird-1">
+                    <p class="p1">乌兹别克观选记|投票正式开始，专家：精英内部已有共识</p>
+                    <div class="sj">
+                        <span>中南海</span>
+                        <img src="img/时间.png" alt="">
+                        <span>一小时前</span>
+                        <div class="fenlei">推荐</div>
+                    </div>
+                </a>
+            </div>
+            <div class="grid">
+                <a href="xq.html">
+                    <img src="img/gird-1.png" alt="" class="gird-1">
+                    <p class="p1">逝世一年多后，全国人大常委原委员长万里与夫人合葬八宝山</p>
+                    <div class="sj">
+                        <span>中南海</span>
+                        <img src="img/时间.png" alt="">
+                        <span>一小时前</span>
+                        <div class="fenlei">推荐</div>
+                    </div>
+                </a>
+            </div>
+            <div class="grid">
+                <a href="xq.html">
+                    <img src="img/列表_10.png" alt="" class="gird-1">
+                    <p class="p1">山西连续四日拉抗霾警报，渣土车停运不达标排放企业停产</p>
+                    <div class="sj">
+                        <span>中南海</span>
+                        <img src="img/时间.png" alt="">
+                        <span>一小时前</span>
+                        <div class="fenlei">推荐</div>
+                    </div>
+                </a>
+            </div>
+        </div>-->
+    </div>
+   <div class="swiper-pagination"></div>
+</div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var swiper = new Swiper('.swiper-container',{
+        pagination: 'null',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        },
+
+        /*切换头部*/
+        onSlideChangeEnd: function(swiper){
+
+            if(swiper.activeIndex==0){
+                $('.header').find('a').eq(1).css({'backgroundImage':'url(img/2.1.png)'});
+            }else if(swiper.activeIndex==1){
+                $('.header').find('a').eq(1).css({'backgroundImage':'url(img/列表_03.png)'})
+            }
+        }
+    });
+</script>

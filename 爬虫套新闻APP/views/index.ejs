@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <script src="http://localhost:8888/js/iconfont.js"></script>
+    <link rel="stylesheet" href="http://localhost:8888/css/index2.css">
+    <script src="http://localhost:8888/js/zepto.min.js"></script>
+    <script src="http://localhost:8888/js/iscroll.js"></script>
+    <script type="text/javascript">
+        function resize(now,type){
+            var type=type||"x";
+            var cw=document.documentElement.clientWidth;
+            var ch=document.documentElement.clientHeight;
+            var html=document.getElementsByTagName("html")[0];
+            if(type=="x"){
+                var scale=cw/now*100;
+                html.style.fontSize=scale+"px";
+            }else if(type=="y"){
+                scale=ch/now*100;
+                html.style.fontSize=scale+"px";
+            }
+        }
+        window.onload=function(){
+            resize(1334,"y");
+            var myScroll;
+            myScroll=new IScroll("#wrapper",{
+                mouseWheel:true,
+                bounce:true,
+                click:true
+            })
+        }
+    </script>
+</head>
+<body>
+<div class="head">
+    <a href="index.html">
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-llmainpageback"></use>
+    </svg>
+    </a>
+    <a href="" class="head-a1">新闻首页</a>
+</div>
+<div id="wrapper">
+    <div id="scroller">
+       <div class="con">
+          <div class="con-1">
+              <a href="http://localhost:8888/">
+              <div class="center">
+                  <p>首页</p>
+              <div class="title">Artical</div>
+              </div>
+              </a>
+          </div>
+           <%for(var i=0;i<categorys.length;i++){%>
+          <div class="con-2">
+              <a href="/list/<%=categorys[i].cid%>">
+              <div class="center">
+                  <p><%=categorys[i].cname%></p>
+                  <div class="title">Artical</div>
+              </div>
+              </a>
+          </div>
+           <%}%>
+          <div class="con-2">
+              <a href="liebiao.html">
+              <div class="center">
+                  <p>港澳</p>
+                  <div class="title">Artical</div>
+              </div>
+              </a>
+          </div>
+          <div class="con-2">
+              <a href="liebiao.html">
+              <div class="center">
+                  <p>军事</p>
+                  <div class="title">Artical</div>
+              </div>
+              </a>
+          </div>
+       </div>
+    </div>
+</div>
+</body>
+</html>
